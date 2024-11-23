@@ -14,6 +14,12 @@ public class GenericUtil {
         return value;
     }
 
+    public static void printList(List<Object> listObjects) {
+        for (Object obj : listObjects) {
+            System.out.println(obj);
+        }
+    }
+
     public long sumInt(List<Integer> elements) {
         long sum = 0;
         for (Integer e : elements) {
