@@ -1,6 +1,5 @@
 package com.baeldung;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,5 +26,13 @@ class GenericsDemo10 {
 
         // List of GenericPaid of Unknown type
         List<MutablePair<?>> pairs1 = List.of(e1, e2);
+
+        // various implementations
+        MutablePair<Integer> pair1 = new MutablePair<>(100, 300);
+        var pair2 = new MutablePair<>(100, 300);
+        MutablePair<?> pair3 = new MutablePair<Integer>(100, 300);
+        MutablePair<? extends Integer> pair4 = new MutablePair<Integer>(100, 300);
+        MutablePair<? extends Number> pair5 = new MutablePair<Integer>(100, 300);
+        MutablePair<? extends Number> pair6 = new MutablePair<>(100, 300);
     }
 }
