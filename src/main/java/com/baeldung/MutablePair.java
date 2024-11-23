@@ -1,11 +1,11 @@
 package com.baeldung;
 
-class MutableNumberPair<T extends Number> {
+class MutablePair<T> {
 
     private T first;
     private T second;
 
-    public MutableNumberPair(T first, T second) {
+    public MutablePair(T first, T second) {
         this.first = first;
         this.second = second;
     }
@@ -18,20 +18,14 @@ class MutableNumberPair<T extends Number> {
         return second;
     }
 
-    public void copyFrom(MutableNumberPair<T> from) {
+    public <S extends T> void copyFrom(MutablePair<S> from) {
         this.first = from.getFirst();
         this.second = from.getSecond();
     }
 
-    public double sum(){
-        double dblFirst = this.first.doubleValue();
-        double dblSecond = this.second.doubleValue();
-        return dblFirst + dblSecond;
-    }
-
     @Override
     public String toString() {
-        return "MutableNumberPair{" +
+        return "MutablePair{" +
                 "first=" + first +
                 ", second=" + second +
                 '}';
