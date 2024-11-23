@@ -23,6 +23,12 @@ class MutableNumberPair<T extends Number> {
         this.second = from.getSecond();
     }
 
+    public double sum(){
+        double dblFirst = this.first.doubleValue();
+        double dblSecond = this.second.doubleValue();
+        return dblFirst + dblSecond;
+    }
+
     @Override
     public String toString() {
         return "MutableNumberPair{" +
