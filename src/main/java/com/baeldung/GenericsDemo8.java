@@ -1,7 +1,8 @@
 package com.baeldung;
 
 /*
-Erasure demo
+Erasure demo, as during compile time all bounded classes are converted to Object
+and later casted to corresponding class
  */
 class GenericsDemo8 {
 
