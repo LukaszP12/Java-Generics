@@ -14,7 +14,13 @@ public class GenericUtil {
         return value;
     }
 
-    public static void printList(List<Object> listObjects) {
+    public static <T> void printList(List<T> listObjects) {
+        for (T obj : listObjects) {
+            System.out.println(obj);
+        }
+    }
+
+    public static void printListWildcard(List<?> listObjects) {
         for (Object obj : listObjects) {
             System.out.println(obj);
         }
