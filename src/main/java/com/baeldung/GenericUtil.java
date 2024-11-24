@@ -5,7 +5,6 @@ import java.util.List;
 public class GenericUtil {
 
     public static <T extends Number> double sum(List<T> elements) {
-
         double value = 0;
         for (T e : elements) {
             value += e.doubleValue();
@@ -24,6 +23,11 @@ public class GenericUtil {
         for (Object obj : listObjects) {
             System.out.println(obj);
         }
+    }
+
+    public static <T> void reset(MutablePair<T> pair, T data) {
+        pair.setFirst(data);
+        pair.setSecond(data);
     }
 
     public long sumInt(List<Integer> elements) {

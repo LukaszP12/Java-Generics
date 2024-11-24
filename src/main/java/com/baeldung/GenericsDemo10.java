@@ -1,5 +1,7 @@
 package com.baeldung;
 
+import java.time.LocalDate;
+import java.time.Month;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,5 +36,19 @@ class GenericsDemo10 {
         MutablePair<? extends Integer> pair4 = new MutablePair<Integer>(100, 300);
         MutablePair<? extends Number> pair5 = new MutablePair<Integer>(100, 300);
         MutablePair<? extends Number> pair6 = new MutablePair<>(100, 300);
+
+        MutablePair<String> cities = new MutablePair<>("New York", "Baltimore");
+        GenericUtil.reset(cities, "DC");
+        System.out.println(cities);
+
+        MutablePair<Integer> intPair = new MutablePair<>(12, 24);
+        GenericUtil.reset(intPair, 100);
+        System.out.println(intPair);
+
+        var date1 = LocalDate.of(2024, Month.MARCH, 15);
+        var date2 = LocalDate.of(2024, Month.APRIL, 15);
+        MutablePair<LocalDate> datePair = new MutablePair<>(date1, date2);
+        GenericUtil.reset(datePair, LocalDate.now());
+        System.out.println(datePair);
     }
 }

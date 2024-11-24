@@ -18,6 +18,14 @@ class MutablePair<T> {
         return second;
     }
 
+    public void setFirst(T first) {
+        this.first = first;
+    }
+
+    public void setSecond(T second) {
+        this.second = second;
+    }
+
     public <S extends T> void copyFrom(MutablePair<S> from) {
         this.first = from.getFirst();
         this.second = from.getSecond();
