@@ -1,5 +1,8 @@
 package com.baeldung;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /*
 Erasure demo, as during compile time all bounded classes are converted to Object
 and later casted to corresponding class
@@ -20,5 +23,6 @@ class GenericsDemo8 {
         // Output -> TRUE for both
         System.out.println(pair1.getClass().equals(pair2.getClass()));
         System.out.println(pair1.getClass() == pair2.getClass());
+
     }
 }

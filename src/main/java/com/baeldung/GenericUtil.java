@@ -30,7 +30,7 @@ public class GenericUtil {
         pair.setSecond(data);
     }
 
-    public static void resetToZero(MutablePair<Integer> pair) {
+    public static void resetToZero(MutablePair<? super Integer> pair) {
         pair.setFirst(0);
         pair.setSecond(0);
     }
@@ -49,5 +49,13 @@ public class GenericUtil {
             sum += e;
         }
         return sum;
+    }
+
+    public static void swap(List<?> list, int i, int j) {
+
+    }
+
+    private static <T> void swapHelper(List<T> list, int i, int j) {
+
     }
 }
