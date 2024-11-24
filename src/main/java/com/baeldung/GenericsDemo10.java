@@ -55,5 +55,10 @@ class GenericsDemo10 {
         MutablePair<Number> agePair = new MutablePair<>(45, 40);
         GenericUtil.reset(agePair, 0);
         System.out.println(agePair);
+
+        // example
+        MutablePair<Integer> pair = new MutablePair<>(1, 3);
+        GenericUtil.resetToZero(pair);
+        System.out.println(pair);
     }
 }
