@@ -30,6 +30,11 @@ public class GenericUtil {
         pair.setSecond(data);
     }
 
+    public static void resetToZero(MutablePair<Integer> pair) {
+        pair.setFirst(0);
+        pair.setSecond(0);
+    }
+
     public long sumInt(List<Integer> elements) {
         long sum = 0;
         for (Integer e : elements) {
