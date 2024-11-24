@@ -50,5 +50,10 @@ class GenericsDemo10 {
         MutablePair<LocalDate> datePair = new MutablePair<>(date1, date2);
         GenericUtil.reset(datePair, LocalDate.now());
         System.out.println(datePair);
+
+        // Pair of Number. Will this work ?
+        MutablePair<Number> agePair = new MutablePair<>(45, 40);
+        GenericUtil.reset(agePair, 0);
+        System.out.println(agePair);
     }
 }
