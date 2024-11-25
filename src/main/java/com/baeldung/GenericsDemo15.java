@@ -23,5 +23,14 @@ class GenericsDemo15 {
 
         Optional<User> oUser1 = Users.getUser("Lucas");
         oUser1.ifPresent(GenericsDemo15::handleUser);
+
+        oUser1.ifPresentOrElse(GenericsDemo15::handleUser,
+                () -> {
+                    try {
+                        throw new Exception("Some Error");
+                    } catch (Exception e) {
+                        throw new RuntimeException(e);
+                    }
+                });
     }
 }
